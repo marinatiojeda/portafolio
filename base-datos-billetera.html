@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Proyecto de base de datos para una billetera digital desarrollado por Maritza Ojeda con MySQL y MySQL Workbench."
+    >
+
+    <title>
+        Base de Datos Billetera Digital | Maritza Ojeda
+    </title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <nav
+            class="navegacion"
+            aria-label="Navegación del proyecto"
+        >
+
+            <a
+                href="index.html"
+                class="marca"
+                aria-label="Volver al portafolio"
+            >
+
+                <div class="logo">
+                    MO
+                </div>
+
+                <div class="nombre-marca">
+
+                    <p class="nombre">
+                        Maritza Ojeda
+                    </p>
+
+                    <p class="especialidad">
+                        Desarrollo de Software
+                    </p>
+
+                </div>
+
+            </a>
+
+            <ul class="menu-principal">
+
+                <li>
+                    <a href="index.html">
+                        ← Volver al portafolio
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main class="detalle-proyecto">
+
+        <a
+            class="enlace-volver"
+            href="index.html#proyectos"
+        >
+            ← Volver a proyectos
+        </a>
+
+        <h1>
+            🗄️ Base de Datos de Billetera Digital
+        </h1>
+
+        <p class="estado finalizado">
+            Proyecto finalizado
+        </p>
+
+        <p>
+            Este proyecto consiste en una base de datos relacional
+            desarrollada para administrar la información principal de una
+            billetera digital.
+        </p>
+
+        <p>
+            La base de datos permite registrar usuarios, monedas y
+            transacciones. También permite consultar saldos, revisar
+            movimientos y controlar las transferencias realizadas entre
+            diferentes usuarios.
+        </p>
+
+        <p>
+            Fue desarrollada como parte de mi formación en Fundamentos de
+            Bases de Datos, utilizando MySQL y MySQL Workbench.
+        </p>
+
+        <h2>
+            Objetivo del proyecto
+        </h2>
+
+        <p>
+            Diseñar e implementar una base de datos relacional que permita
+            representar de forma organizada las operaciones principales de
+            una billetera digital.
+        </p>
+
+        <p>
+            El proyecto busca mantener una correcta relación entre los
+            usuarios, las monedas y las transacciones, protegiendo la
+            consistencia de la información mediante claves primarias,
+            claves foráneas y transacciones controladas.
+        </p>
+
+        <h2>
+            Tecnologías utilizadas
+        </h2>
+
+        <ul>
+
+            <li>
+                MySQL como sistema de gestión de bases de datos.
+            </li>
+
+            <li>
+                SQL para crear, consultar, actualizar y eliminar información.
+            </li>
+
+            <li>
+                MySQL Workbench para diseñar, ejecutar y comprobar la base
+                de datos.
+            </li>
+
+            <li>
+                GitHub para almacenar y presentar el proyecto.
+            </li>
+
+        </ul>
+
+        <h2>
+            Estructura de la base de datos
+        </h2>
+
+        <p>
+            La base de datos está formada por tres tablas principales:
+        </p>
+
+        <ul>
+
+            <li>
+                <strong>usuario:</strong> almacena la información de las
+                personas registradas y su saldo disponible.
+            </li>
+
+            <li>
+                <strong>moneda:</strong> almacena las monedas disponibles
+                para realizar las operaciones.
+            </li>
+
+            <li>
+                <strong>transaccion:</strong> registra los envíos de dinero
+                realizados entre los usuarios.
+            </li>
+
+        </ul>
+
+        <h2>
+            Tabla usuario
+        </h2>
+
+        <p>
+            La tabla usuario almacena los datos principales de cada persona
+            registrada en la billetera digital.
+        </p>
+
+        <ul>
+
+            <li>
+                Identificador único del usuario.
+            </li>
+
+            <li>
+                Nombre del usuario.
+            </li>
+
+            <li>
+                Correo electrónico.
+            </li>
+
+            <li>
+                Contraseña.
+            </li>
+
+            <li>
+                Saldo disponible.
+            </li>
+
+        </ul>
+
+        <h2>
+            Tabla moneda
+        </h2>
+
+        <p>
+            La tabla moneda permite registrar las diferentes monedas que
+            pueden utilizarse en las transacciones.
+        </p>
+
+        <p>
+            Las monedas incorporadas en el proyecto son:
+        </p>
+
+        <ul>
+
+            <li>
+                Peso chileno (CLP).
+            </li>
+
+            <li>
+                Dólar estadounidense (USD).
+            </li>
+
+            <li>
+                Peso argentino (ARS).
+            </li>
+
+            <li>
+                Peso mexicano (MXN).
+            </li>
+
+            <li>
+                Euro (EUR).
+            </li>
+
+        </ul>
+
+        <h2>
+            Tabla transaccion
+        </h2>
+
+        <p>
+            La tabla transaccion almacena la información correspondiente a
+            cada envío de dinero realizado dentro de la billetera digital.
+        </p>
+
+        <ul>
+
+            <li>
+                Identificador único de la transacción.
+            </li>
+
+            <li>
+                Usuario que envía el dinero.
+            </li>
+
+            <li>
+                Usuario que recibe el dinero.
+            </li>
+
+            <li>
+                Moneda utilizada.
+            </li>
+
+            <li>
+                Importe de la transacción.
+            </li>
+
+            <li>
+                Fecha y hora de la operación.
+            </li>
+
+        </ul>
+
+        <h2>
+            Relaciones entre las tablas
+        </h2>
+
+        <p>
+            Las tablas se relacionan mediante claves primarias y claves
+            foráneas.
+        </p>
+
+        <ul>
+
+            <li>
+                Cada usuario posee un identificador único.
+            </li>
+
+            <li>
+                Cada moneda posee un identificador único.
+            </li>
+
+            <li>
+                Cada transacción identifica al usuario que envía el dinero.
+            </li>
+
+            <li>
+                Cada transacción identifica al usuario que recibe el dinero.
+            </li>
+
+            <li>
+                Cada transacción se relaciona con una moneda existente.
+            </li>
+
+        </ul>
+
+        <p>
+            Estas relaciones permiten evitar datos incorrectos y aseguran
+            que las transacciones solo puedan realizarse utilizando usuarios
+            y monedas registrados.
+        </p>
+
+        <h2>
+            Datos incorporados
+        </h2>
+
+        <p>
+            Para comprobar el funcionamiento de la base de datos se
+            incorporaron diferentes datos de prueba.
+        </p>
+
+        <ul>
+
+            <li>
+                50 usuarios registrados.
+            </li>
+
+            <li>
+                5 monedas diferentes.
+            </li>
+
+            <li>
+                60 transacciones con diferentes fechas, usuarios y montos.
+            </li>
+
+        </ul>
+
+        <h2>
+            Funcionalidades implementadas
+        </h2>
+
+        <ul>
+
+            <li>
+                Creación de la base de datos.
+            </li>
+
+            <li>
+                Creación de las tablas usuario, moneda y transaccion.
+            </li>
+
+            <li>
+                Definición de claves primarias.
+            </li>
+
+            <li>
+                Definición de claves foráneas.
+            </li>
+
+            <li>
+                Registro de usuarios.
+            </li>
+
+            <li>
+                Registro de monedas.
+            </li>
+
+            <li>
+                Registro de transacciones.
+            </li>
+
+            <li>
+                Consulta de usuarios y saldos.
+            </li>
+
+            <li>
+                Consulta del historial de transacciones.
+            </li>
+
+            <li>
+                Actualización de datos mediante UPDATE.
+            </li>
+
+            <li>
+                Eliminación de registros mediante DELETE.
+            </li>
+
+            <li>
+                Inserción de datos mediante INSERT.
+            </li>
+
+            <li>
+                Uso de filtros mediante WHERE.
+            </li>
+
+            <li>
+                Actualización del saldo después de una operación.
+            </li>
+
+            <li>
+                Verificación de la integridad de los datos.
+            </li>
+
+        </ul>
+
+        <h2>
+            Control de transacciones
+        </h2>
+
+        <p>
+            En el proyecto se utilizaron transacciones controladas para
+            proteger las operaciones que modifican información importante,
+            como los saldos de los usuarios.
+        </p>
+
+        <ul>
+
+            <li>
+                <strong>START TRANSACTION:</strong> permite iniciar una
+                transacción.
+            </li>
+
+            <li>
+                <strong>COMMIT:</strong> confirma y guarda permanentemente
+                los cambios realizados.
+            </li>
+
+            <li>
+                <strong>ROLLBACK:</strong> revierte los cambios cuando ocurre
+                un error.
+            </li>
+
+        </ul>
+
+        <p>
+            También se realizó una simulación de error de integridad
+            referencial utilizando un usuario inexistente. Esto permitió
+            comprobar que la base de datos protege la información y evita
+            registrar transacciones incorrectas.
+        </p>
+
+        <h2>
+            Propiedades ACID
+        </h2>
+
+        <p>
+            Durante el desarrollo del proyecto se aplicaron las propiedades
+            ACID, fundamentales para mantener la seguridad y consistencia de
+            una base de datos.
+        </p>
+
+        <ul>
+
+            <li>
+                <strong>Atomicidad:</strong> una operación se completa
+                totalmente o se revierte.
+            </li>
+
+            <li>
+                <strong>Consistencia:</strong> la información permanece
+                válida antes y después de cada operación.
+            </li>
+
+            <li>
+                <strong>Aislamiento:</strong> las transacciones no interfieren
+                incorrectamente entre sí.
+            </li>
+
+            <li>
+                <strong>Durabilidad:</strong> los cambios confirmados con
+                COMMIT se conservan de manera permanente.
+            </li>
+
+        </ul>
+
+        <h2>
+            Organización del proyecto
+        </h2>
+
+        <p>
+            El proyecto fue desarrollado de manera ordenada, separando las
+            diferentes etapas de creación y comprobación de la base de datos.
+        </p>
+
+        <ul>
+
+            <li>
+                Creación del esquema de la base de datos.
+            </li>
+
+            <li>
+                Creación de las tablas.
+            </li>
+
+            <li>
+                Inserción de monedas.
+            </li>
+
+            <li>
+                Inserción de usuarios.
+            </li>
+
+            <li>
+                Inserción de transacciones.
+            </li>
+
+            <li>
+                Ejecución de consultas de comprobación.
+            </li>
+
+            <li>
+                Actualización de saldos.
+            </li>
+
+            <li>
+                Pruebas con COMMIT y ROLLBACK.
+            </li>
+
+            <li>
+                Creación del diagrama de la base de datos.
+            </li>
+
+        </ul>
+
+        <h2>
+            Lo que aprendí
+        </h2>
+
+        <p>
+            Con este proyecto aprendí a diseñar una base de datos relacional,
+            crear tablas y establecer relaciones utilizando claves primarias
+            y claves foráneas.
+        </p>
+
+        <p>
+            También aprendí a utilizar instrucciones SQL para insertar,
+            consultar, actualizar y eliminar información.
+        </p>
+
+        <p>
+            Otro aprendizaje importante fue comprender el funcionamiento de
+            las transacciones, utilizar COMMIT y ROLLBACK, y reconocer la
+            importancia de la integridad referencial.
+        </p>
+
+        <p>
+            Además, aprendí a utilizar MySQL Workbench para ejecutar código,
+            revisar los datos almacenados y generar el diagrama de la base de
+            datos.
+        </p>
+
+        <h2>
+            Relación con la aplicación web
+        </h2>
+
+        <p>
+            Esta base de datos se relaciona directamente con el proyecto
+            Billetera Digital Web que también se encuentra en mi portafolio.
+        </p>
+
+        <p>
+            Actualmente, la aplicación web almacena la información en el
+            navegador mediante LocalStorage y SessionStorage.
+        </p>
+
+        <p>
+            Como mejora futura, la aplicación web podría conectarse a esta
+            base de datos mediante un servidor y una API para almacenar la
+            información de manera permanente.
+        </p>
+
+        <h2>
+            Próximas mejoras
+        </h2>
+
+        <ul>
+
+            <li>
+                Conectar la base de datos con la aplicación web.
+            </li>
+
+            <li>
+                Desarrollar una API para administrar las operaciones.
+            </li>
+
+            <li>
+                Implementar autenticación segura.
+            </li>
+
+            <li>
+                Proteger las contraseñas de los usuarios.
+            </li>
+
+            <li>
+                Incorporar procedimientos almacenados.
+            </li>
+
+            <li>
+                Agregar nuevas validaciones.
+            </li>
+
+            <li>
+                Crear reportes de transacciones y saldos.
+            </li>
+
+            <li>
+                Implementar copias de seguridad.
+            </li>
+
+        </ul>
+
+        <h2>
+            Evidencias del proyecto
+        </h2>
+
+        <p>
+    Estas capturas muestran el diseño de la base de datos, las
+    relaciones entre las tablas y las principales pruebas realizadas
+    en MySQL Workbench.
+</p>
+
+<section
+    class="galeria-proyecto"
+    aria-label="Galería de evidencias del proyecto Base de Datos"
+>
+
+    <figure class="captura-proyecto">
+
+        <a
+            href="imagenes/bd-diagrama.png"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <img
+                src="imagenes/bd-diagrama.png"
+                alt="Diagrama EER de la base de datos de la Billetera Digital"
+                loading="lazy"
+            >
+
+        </a>
+
+        <figcaption>
+
+            <strong>
+                Diagrama EER
+            </strong>
+
+            <span>
+                Relaciones entre las tablas usuario, moneda y transaccion.
+            </span>
+
+        </figcaption>
+
+    </figure>
+
+    <figure class="captura-proyecto">
+
+        <a
+            href="imagenes/bd-commit.png"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <img
+                src="imagenes/bd-commit.png"
+                alt="Ejecución de START TRANSACTION, UPDATE y COMMIT en MySQL Workbench"
+                loading="lazy"
+            >
+
+        </a>
+
+        <figcaption>
+
+            <strong>
+                COMMIT exitoso
+            </strong>
+
+            <span>
+                Confirmación permanente de la actualización del saldo.
+            </span>
+
+        </figcaption>
+
+    </figure>
+
+    <figure class="captura-proyecto">
+
+        <a
+            href="imagenes/bd-rollback-verificacion.png"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <img
+                src="imagenes/bd-rollback-verificacion.png"
+                alt="Ejecución de ROLLBACK y verificación del saldo de un usuario"
+                loading="lazy"
+            >
+
+        </a>
+
+        <figcaption>
+
+            <strong>
+                ROLLBACK y verificación
+            </strong>
+
+            <span>
+                Reversión de cambios y comprobación del saldo del usuario.
+            </span>
+
+        </figcaption>
+
+    </figure>
+
+    <figure class="captura-proyecto">
+
+        <a
+            href="imagenes/bd-transacciones-control.png"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <img
+                src="imagenes/bd-transacciones-control.png"
+                alt="Prueba de integridad referencial con una transacción inválida"
+                loading="lazy"
+            >
+
+        </a>
+
+        <figcaption>
+
+            <strong>
+                Control de integridad
+            </strong>
+
+            <span>
+                Prueba con un usuario inexistente y bloqueo de una transacción inválida.
+            </span>
+
+        </figcaption>
+
+    </figure>
+
+    <figure class="captura-proyecto">
+
+        <a
+            href="imagenes/bd-update-usuario.png"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <img
+                src="imagenes/bd-update-usuario.png"
+                alt="Actualización y consulta del saldo de un usuario en MySQL Workbench"
+                loading="lazy"
+            >
+
+        </a>
+
+        <figcaption>
+
+            <strong>
+                Actualización de saldo
+            </strong>
+
+            <span>
+                Uso de UPDATE y SELECT para modificar y comprobar el saldo.
+            </span>
+
+        </figcaption>
+
+    </figure>
+
+</section>
+
+<p class="aviso-galeria">
+    Puedes hacer clic sobre una captura para verla en tamaño completo.
+
+</p>
+        
+
+        <a
+            class="enlace-volver"
+            href="index.html#proyectos"
+        >
+            ← Volver a mis proyectos
+        </a>
+
+    </main>
+
+    <footer>
+
+        <p>
+            © 2026 Maritza Ojeda. Portafolio profesional.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
