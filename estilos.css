@@ -1082,7 +1082,7 @@ button:focus-visible {
 .certificacion-imagen {
     display: block;
     width: 100%;
-    max-width: 380px;
+    max-width: 350px;
     height: auto;
     border-radius: 10px;
     border: 1px solid #ddd;
